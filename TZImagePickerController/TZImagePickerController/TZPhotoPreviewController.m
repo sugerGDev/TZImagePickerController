@@ -212,14 +212,14 @@
         [_cropView removeFromSuperview];
         [_cropBgView removeFromSuperview];
         
-        _cropBgView = [UIView new];
+        _cropBgView = [[UIView alloc]init];
         _cropBgView.userInteractionEnabled = NO;
         _cropBgView.frame = self.view.bounds;
         _cropBgView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:_cropBgView];
         [TZImageCropManager overlayClippingWithView:_cropBgView cropRect:_tzImagePickerVc.cropRect containerView:self.view needCircleCrop:_tzImagePickerVc.needCircleCrop];
         
-        _cropView = [UIView new];
+        _cropView = [[UIView alloc]init];
         _cropView.userInteractionEnabled = NO;
         _cropView.frame = _tzImagePickerVc.cropRect;
         _cropView.backgroundColor = [UIColor clearColor];

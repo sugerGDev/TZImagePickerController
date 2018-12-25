@@ -172,7 +172,7 @@ static CGFloat itemMargin = 5;
     } else {
         _collectionView.contentSize = CGSizeMake(self.view.tz_width, ((_model.count + self.columnNumber - 1) / self.columnNumber) * self.view.tz_width);
         if (_models.count == 0) {
-            _noDataLabel = [UILabel new];
+            _noDataLabel = [[UILabel alloc]init];
             _noDataLabel.textAlignment = NSTextAlignmentCenter;
             _noDataLabel.text = [NSBundle tz_localizedStringForKey:@"No Photos or Videos"];
             CGFloat rgb = 153 / 256.0;
